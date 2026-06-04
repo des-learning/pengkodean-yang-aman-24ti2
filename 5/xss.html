@@ -1,0 +1,20 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <form>
+      <textarea name="input_user"></textarea>
+
+      <input type="submit" value="Submit">
+
+    </form>
+    <div id="output"></div>
+    <script type="text/javascript">
+      const urlParams = new URLSearchParams(window.location.search);
+      const myParam = urlParams.get('input_user');
+
+      const output = document.querySelector("#output");
+      output.innerHTML = myParam;
+    </script>
+  </body>
+</html>

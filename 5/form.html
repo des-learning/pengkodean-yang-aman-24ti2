@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <body>
+      <form id="form">
+        <input type="hidden" value="some_random_data" />
+        <input type="text" name="nama" />
+        <input type="button" value="kirim" onclick="process_form()" />
+      </form>
+
+      <div id="output">
+      </div>
+
+      <script type="text/javascript">
+        function process_form() {
+          const form = new FormData(document.querySelector("#form"))
+          const nama = form.get("nama")
+
+          const output = document.querySelector("#output");
+
+          const newEl = document.createElement("p");
+          newEl.innerHTML = nama;
+          output.appendChild(newEl)
+        }
+      </script>
+    </body>
+  </head>
+</html>
